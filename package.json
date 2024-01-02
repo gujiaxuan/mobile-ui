@@ -10,11 +10,6 @@
     "setup": "max setup",
     "start": "npm run dev"
   },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-customizable"
-    }
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
@@ -33,12 +28,14 @@
       "prettier --write"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
   "dependencies": {
-    "@ant-design/icons": "^5.2.6",
-    "@ant-design/pro-components": "^2.6.43",
     "@umijs/max": "^4.0.90",
     "@umijs/plugin-antd-mobile": "^1.2.0",
-    "antd": "^5.12.5",
     "antd-mobile": "^5.33.2",
     "antd-mobile-icons": "^0.3.0"
   },
@@ -47,6 +44,7 @@
     "@commitlint/config-conventional": "^18.4.3",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
+    "ahooks": "^3.7.8",
     "cz-customizable": "^7.0.0",
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
