@@ -1,4 +1,4 @@
-module.exports = ({ webpack }) => {
+module.exports = ({ }) => {
     return {
         plugins: {
             autoprefixer: {},

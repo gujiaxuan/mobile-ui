@@ -1,5 +1,0 @@
-{
-    "*.{js,jsx,vue,ts}": [
-        "umi lint"
-    ]
-}
