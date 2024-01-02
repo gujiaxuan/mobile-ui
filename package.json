@@ -10,6 +10,19 @@
     "setup": "max setup",
     "start": "npm run dev"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "prettier --write ./src",
+      "eslint --ext .js,.jsx,.ts,.tsx,.css,.les --fix ./src",
+      "git add"
+    ]
+  },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "@ant-design/pro-components": "^2.6.43",
