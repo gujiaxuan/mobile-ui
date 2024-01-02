@@ -17,19 +17,19 @@ export default defineConfig({
       // 依赖 origin 的功能可能需要这个，比如 cookie
       changeOrigin: true,
       pathRewrite: { '^/api': '/api' },
-    }
+    },
   },
   routes: [
+    { path: '/', redirect: '/home' },
     {
       path: '/',
-      redirect: '/hoc',
+      component: '@/layouts/index',
+      routes: [
+        { path: '/home', component: '@/pages/home' },
+        { path: '/mine', component: '@/pages/mine' },
+        { path: '/workbench', component: '@/pages/workbench' },
+      ],
     },
-    {
-      name: '首页',
-      path: '/hoc',
-      component: './hoc',
-    }
   ],
   npmClient: 'pnpm',
 });
-

@@ -67,6 +67,15 @@ devDependencies:
   stylelint:
     specifier: ^16.1.0
     version: 16.1.0(typescript@5.3.3)
+  stylelint-config-css-modules:
+    specifier: ^4.4.0
+    version: 4.4.0(stylelint@16.1.0)
+  stylelint-config-standard:
+    specifier: ^36.0.0
+    version: 36.0.0(stylelint@16.1.0)
+  stylelint-order:
+    specifier: ^6.0.4
+    version: 6.0.4(stylelint@16.1.0)
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -105,10 +114,10 @@ packages:
       '@ctrl/tinycolor': 3.6.1
     dev: false
 
-  /@ant-design/colors@7.0.1:
-    resolution: {integrity: sha512-SrZBQcrXNmrH8TJPXZReYcXs4jSqkwNS3EEhpN6esBI9sNX70g5LZP05/uSPjflkIt2orvjivQ/ywVBqTbHZ+A==}
+  /@ant-design/colors@7.0.2:
+    resolution: {integrity: sha512-7KJkhTiPiLHSu+LmMJnehfJ6242OCxSlR3xHVBecYxnMW8MS/878NXct1GqYARyL59fyeFdKRxXTfvR9SnDgJg==}
     dependencies:
-      '@ctrl/tinycolor': 4.0.2
+      '@ctrl/tinycolor': 3.6.1
     dev: false
 
   /@ant-design/cssinjs@1.18.2(react-dom@18.2.0)(react@18.2.0):
@@ -156,7 +165,7 @@ packages:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
     dependencies:
-      '@ant-design/colors': 7.0.1
+      '@ant-design/colors': 7.0.2
       '@ant-design/icons-svg': 4.3.1
       '@babel/runtime': 7.23.7
       classnames: 2.5.1
@@ -1208,11 +1217,6 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /@ctrl/tinycolor@4.0.2:
-    resolution: {integrity: sha512-fKQinXE9pJ83J1n+C3rDl2xNLJwfoYNvXLRy5cYZA9hBJJw2q+sbb/AOSNKmLxnTWyNTmy4994dueSwP4opi5g==}
-    engines: {node: '>=14'}
-    dev: false
-
   /@dnd-kit/accessibility@3.1.0(react@18.2.0):
     resolution: {integrity: sha512-ea7IkhKvlJUv9iSHJOnxinBcoOI3ppGnnL+VDJ75O45Nss6HtZd8IdN8touXPDtASfeI2T2LImb8VOZcL47wjQ==}
     peerDependencies:
@@ -1977,7 +1981,7 @@ packages:
     peerDependencies:
       react: '>=16.3.0'
     dependencies:
-      '@babel/runtime': 7.23.7
+      '@babel/runtime': 7.23.2
       hoist-non-react-statics: 3.3.2
       react: 18.1.0
       react-is: 16.13.1
@@ -1989,7 +1993,7 @@ packages:
     peerDependencies:
       react: '>=16.3.0'
     dependencies:
-      '@babel/runtime': 7.23.7
+      '@babel/runtime': 7.23.2
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
       react-is: 16.13.1
@@ -3020,7 +3024,7 @@ packages:
   /@umijs/history@5.3.1:
     resolution: {integrity: sha512-/e0cEGrR2bIWQD7pRl3dl9dcyRGeC9hoW0OCvUTT/hjY0EfUrkd6G8ZanVghPMpDuY5usxq9GVcvrT8KNXLWvA==}
     dependencies:
-      '@babel/runtime': 7.23.7
+      '@babel/runtime': 7.23.2
       query-string: 6.14.1
     dev: false
 
@@ -6589,7 +6593,7 @@ packages:
   /history@5.3.0:
     resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
     dependencies:
-      '@babel/runtime': 7.23.7
+      '@babel/runtime': 7.23.2
     dev: false
 
   /hmac-drbg@1.0.1:
@@ -8959,7 +8963,6 @@ packages:
 
   /postcss-media-query-parser@0.2.3:
     resolution: {integrity: sha512-3sOlxmbKcSHMjlUXQZKQ06jOswE7oVkXPxmZdoB1r5l0q6gTFTQSHxNxOrCccElbW7dxNytifNEo8qidX2Vsig==}
-    dev: false
 
   /postcss-modules-extract-imports@3.0.0(postcss@8.4.32):
     resolution: {integrity: sha512-bdHleFnP3kZ4NYDhuGlVK+CMrQ/pqUm8bx/oGL93K6gVwiclvX5x0n76fYMKuIGKzlABOy13zsvqjb0f92TEXw==}
@@ -9288,6 +9291,14 @@ packages:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
+
+  /postcss-sorting@8.0.2(postcss@8.4.32):
+    resolution: {integrity: sha512-M9dkSrmU00t/jK7rF6BZSZauA5MAaBW4i5EnJXspMwt4iqTh/L9j6fgMnbElEOfyRyfLfVbIHj/R52zHzAPe1Q==}
+    peerDependencies:
+      postcss: ^8.4.20
+    dependencies:
+      postcss: 8.4.32
+    dev: true
 
   /postcss-syntax@0.36.2(postcss@8.4.32):
     resolution: {integrity: sha512-nBRg/i7E3SOHWxF3PpF5WnJM/jQ1YpY9000OaVXlAQj6Zp/kIqJxEDWIZ67tAd7NLuk7zqN4yqe9nc0oNAOs1w==}
@@ -10271,7 +10282,7 @@ packages:
       react: ^16.6.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.6.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@babel/runtime': 7.23.7
+      '@babel/runtime': 7.23.2
       invariant: 2.2.4
       prop-types: 15.8.1
       react: 18.1.0
@@ -10286,7 +10297,7 @@ packages:
       react: ^16.6.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.6.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@babel/runtime': 7.23.7
+      '@babel/runtime': 7.23.2
       invariant: 2.2.4
       prop-types: 15.8.1
       react: 18.2.0
@@ -11640,6 +11651,25 @@ packages:
       tslib: 2.6.2
     dev: false
 
+  /stylelint-config-css-modules@4.4.0(stylelint@16.1.0):
+    resolution: {integrity: sha512-J93MtxPjRzs/TjwbJ5y9SQy4iIqULXwL1CF1yx2tQCJfS/VZUcDAmoGOwqlLbhHXSQtZO5XQiA75NVWUR3KDCQ==}
+    peerDependencies:
+      stylelint: ^14.5.1 || ^15.0.0 || ^16.0.0
+    dependencies:
+      stylelint: 16.1.0(typescript@5.3.3)
+    optionalDependencies:
+      stylelint-scss: 6.0.0(stylelint@16.1.0)
+    dev: true
+
+  /stylelint-config-recommended@14.0.0(stylelint@16.1.0):
+    resolution: {integrity: sha512-jSkx290CglS8StmrLp2TxAppIajzIBZKYm3IxT89Kg6fGlxbPiTiyH9PS5YUuVAFwaJLl1ikiXX0QWjI0jmgZQ==}
+    engines: {node: '>=18.12.0'}
+    peerDependencies:
+      stylelint: ^16.0.0
+    dependencies:
+      stylelint: 16.1.0(typescript@5.3.3)
+    dev: true
+
   /stylelint-config-recommended@7.0.0(stylelint@14.8.2):
     resolution: {integrity: sha512-yGn84Bf/q41J4luis1AZ95gj0EQwRX8lWmGmBwkwBNSkpGSpl66XcPTulxGa/Z91aPoNGuIGBmFkcM1MejMo9Q==}
     peerDependencies:
@@ -11656,6 +11686,42 @@ packages:
       stylelint: 14.8.2
       stylelint-config-recommended: 7.0.0(stylelint@14.8.2)
     dev: false
+
+  /stylelint-config-standard@36.0.0(stylelint@16.1.0):
+    resolution: {integrity: sha512-3Kjyq4d62bYFp/Aq8PMKDwlgUyPU4nacXsjDLWJdNPRUgpuxALu1KnlAHIj36cdtxViVhXexZij65yM0uNIHug==}
+    engines: {node: '>=18.12.0'}
+    peerDependencies:
+      stylelint: ^16.1.0
+    dependencies:
+      stylelint: 16.1.0(typescript@5.3.3)
+      stylelint-config-recommended: 14.0.0(stylelint@16.1.0)
+    dev: true
+
+  /stylelint-order@6.0.4(stylelint@16.1.0):
+    resolution: {integrity: sha512-0UuKo4+s1hgQ/uAxlYU4h0o0HS4NiQDud0NAUNI0aa8FJdmYHA5ZZTFHiV5FpmE3071e9pZx5j0QpVJW5zOCUA==}
+    peerDependencies:
+      stylelint: ^14.0.0 || ^15.0.0 || ^16.0.1
+    dependencies:
+      postcss: 8.4.32
+      postcss-sorting: 8.0.2(postcss@8.4.32)
+      stylelint: 16.1.0(typescript@5.3.3)
+    dev: true
+
+  /stylelint-scss@6.0.0(stylelint@16.1.0):
+    resolution: {integrity: sha512-N1xV/Ef5PNRQQt9E45unzGvBUN1KZxCI8B4FgN/pMfmyRYbZGVN4y9qWlvOMdScU17c8VVCnjIHTVn38Bb6qSA==}
+    engines: {node: '>=18.12.0'}
+    requiresBuild: true
+    peerDependencies:
+      stylelint: ^16.0.2
+    dependencies:
+      known-css-properties: 0.29.0
+      postcss-media-query-parser: 0.2.3
+      postcss-resolve-nested-selector: 0.1.1
+      postcss-selector-parser: 6.0.15
+      postcss-value-parser: 4.2.0
+      stylelint: 16.1.0(typescript@5.3.3)
+    dev: true
+    optional: true
 
   /stylelint@14.8.2:
     resolution: {integrity: sha512-tjDfexCYfoPdl/xcDJ9Fv+Ko9cvzbDnmdiaqEn3ovXHXasi/hbkt5tSjsiReQ+ENqnz0eltaX/AOO+AlzVdcNA==}

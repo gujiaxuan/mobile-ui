@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from './demo2.less';
+import styles from './index.less';
 
 export default () => {
   const [hh, setHh] = useState({});
@@ -10,5 +10,5 @@ export default () => {
     }
   }, []);
 
-  return <div className={styles['demo']}>啦啦啦</div>;
+  return <div className={styles['demo']}>啦1啦啦</div>;
 };
