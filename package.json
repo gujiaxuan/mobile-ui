@@ -10,11 +10,6 @@
     "setup": "max setup",
     "start": "npm run dev"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,css,less}": [
-      "umi lint"
-    ]
-  },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "@ant-design/pro-components": "^2.6.43",
