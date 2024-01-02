@@ -7,6 +7,18 @@ export default defineConfig({
   initialState: {},
   request: {},
   layout: false,
+  proxy: {
+    '/api/': {
+      // 要代理的地址
+      // target: 'http://crm.365me.me/',
+      target: 'http://puhuicrm.creakeweb.com/',
+
+      // 配置了这个可以从 http 代理到 https
+      // 依赖 origin 的功能可能需要这个，比如 cookie
+      changeOrigin: true,
+      pathRewrite: { '^/api': '/api' },
+    }
+  },
   routes: [
     {
       path: '/',
@@ -16,17 +28,7 @@ export default defineConfig({
       name: '首页',
       path: '/hoc',
       component: './hoc',
-    },
-    // {
-    //   name: '权限演示',
-    //   path: '/access',
-    //   component: './Access',
-    // },
-    // {
-    //   name: ' CRUD 示例',
-    //   path: '/table',
-    //   component: './Table',
-    // },
+    }
   ],
   npmClient: 'pnpm',
 });
