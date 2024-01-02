@@ -10,6 +10,11 @@
     "setup": "max setup",
     "start": "npm run dev"
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
@@ -17,10 +22,15 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,vue}": [
-      "prettier --write ./src",
-      "eslint --ext .js,.jsx,.ts,.tsx,.css,.les --fix ./src",
-      "git add"
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,less,scss,html,md}": [
+      "prettier --write"
+    ],
+    "package.json": [
+      "prettier --write"
     ]
   },
   "dependencies": {
@@ -37,6 +47,7 @@
     "@commitlint/config-conventional": "^18.4.3",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
